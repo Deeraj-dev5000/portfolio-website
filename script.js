@@ -31,7 +31,7 @@ form.addEventListener("submit", async (e) => {
 
 // Load messages
 async function loadMessages() {
-  const res = await fetch("http://localhost:3000/messages");
+  const res = await fetch("/messages");
   const data = await res.json();
 
   const container = document.getElementById("messagesList");
