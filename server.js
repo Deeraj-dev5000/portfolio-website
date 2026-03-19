@@ -5,14 +5,11 @@ const mongoose = require("mongoose");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// MongoDB connection 
-// MongoDB connect
-mongoose.connect("mongodb+srv://admin:admin123@cluster0.jomcq3v.mongodb.net/?retryWrites=true&w=majority")
-.then(() => console.log("MongoDB Connected"))
-.catch(err => console.log(err));
-
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
