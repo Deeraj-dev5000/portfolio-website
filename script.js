@@ -11,7 +11,7 @@ form.addEventListener("submit", async (e) => {
   const data = { name, email, message };
 
   try {
-    await fetch("http://localhost:3000/contact", {
+    await fetch("/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
