@@ -150,3 +150,54 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
+/* ===== RESUME IMPROVEMENTS ===== */
+
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.project {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+h2 {
+  color: #38bdf8;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 6px 0;
+}
+/* ===== BUTTON STYLE ===== */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
