@@ -7,18 +7,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
+      - run: npm install
 
-      - name: Install dependencies
-        run: npm install
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - run: echo "Testing..."
 
-      - name: Basic check
-        run: echo "Pipeline running successfully"
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - run: echo "Deploying..."
